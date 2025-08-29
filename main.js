@@ -3,7 +3,7 @@ import  * as THREE from './js/modules/three.js';
 import { OrbitControls } from './js/modules/OrbitControls.js';
 import { GLTFLoader } from './js/modules/GLTFLoader.js';
 import { VRButton } from './js/modules/VRButton.js';
-import { OBJLoader } from 'https://unpkg.com/three@0.161.0/examples/jsm/loaders/OBJLoader.js';
+import { OBJLoader } from 'https://unpkg.com/three@0.126.1/examples/jsm/loaders/OBJLoader.js';
 
 
 
