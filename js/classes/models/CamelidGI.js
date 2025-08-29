@@ -1,20 +1,17 @@
-import { Model } from "./models.js";
+export default class CamelidGI {
+  constructor() {
+    this.name = "CamelidGI";
+    this.modelInfo = "Camelid Gastrointestinal placeholder (outer/inner).";
+    this.modelImageURL = "/img/camelid_gi_thumbnail.png";   // <- this file exists
+    this.scale = 0.01;
+    this.center = [0, 0, 0];
 
-const partsList = ['C1','C2','C3','INT'];
-const friendly = {
-  C1: 'C1 (Rumen-like compartment)',
-  C2: 'C2 (Fore-stomach)',
-  C3: 'C3 (True stomach-like)',
-  INT: 'Intestines'
-};
+    this.components = ["C1", "C2", "C3", "INT"];
 
-const files = {
-  OUTER: './models/CamelidGI/camelid_stomach_outer.obj',
-  INNER: './models/CamelidGI/camelid_stomach_inner.obj'
-};
-
-const center = { x: 0, y: 1.0, z: 0 };
-const scale  = 0.1;
-
-const CamelidGI = new Model('CamelidGI', partsList, friendly, files, scale, center);
-export default CamelidGI;
+    // Correct file names:
+    this.files = {
+      OUTER: "/models/CamelidGI/camelid_stomach_outer.obj",
+      INNER: "/models/CamelidGI/camelid_stomach_inner.obj"
+    };
+  }
+}
