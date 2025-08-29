@@ -1,17 +1,19 @@
-export default class CamelidGI {
-  constructor() {
-    this.name = "CamelidGI";
-    this.modelInfo = "Camelid Gastrointestinal placeholder (outer/inner).";
-    this.modelImageURL = "/img/camelid_gi_thumbnail.png";   // <- this file exists
-    this.scale = 0.01;
-    this.center = [0, 0, 0];
+// js/classes/models/CamelidGI.js
+import { Model } from "./models.js";
 
-    this.components = ["C1", "C2", "C3", "INT"];
+const model = new Model(
+  "CamelidGI",
+  ["C1", "C2", "C3", "INT"], // the parts list that shows in the sidebar
+  0.01,                      // scale
+  [0, 0, 0],                 // center
+  "Camelid Gastrointestinal placeholder (outer/inner).",
+  "/img/models/preview/camelid_gi_thumbnail.png" // make sure this file exists
+);
 
-    // Correct file names:
-    this.files = {
-      OUTER: "/models/CamelidGI/camelid_stomach_outer.obj",
-      INNER: "/models/CamelidGI/camelid_stomach_inner.obj"
-    };
-  }
-}
+// add the two OBJ files your custom loader uses
+model.files = {
+  OUTER: "/models/CamelidGI/camelid_stomach_outer.obj",
+  INNER: "/models/CamelidGI/camelid_stomach_inner.obj",
+};
+
+export default model;
